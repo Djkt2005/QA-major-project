@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-23T09:50:15 IST" name="Default suite" finished-at="2025-04-23T09:51:02 IST" duration-ms="47334">
+  <suite started-at="2025-04-28T15:46:43 IST" name="Default suite" finished-at="2025-04-28T15:47:00 IST" duration-ms="17298">
     <groups>
     </groups>
-    <test started-at="2025-04-23T09:50:15 IST" name="Default test" finished-at="2025-04-23T09:51:02 IST" duration-ms="47334">
-      <class name="QAproject.ExplicitWait">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:QAproject.ExplicitWait@72967906]" started-at="2025-04-23T09:50:15 IST" name="openBrowser" finished-at="2025-04-23T09:50:17 IST" duration-ms="2171" status="PASS">
+    <test started-at="2025-04-28T15:46:43 IST" name="Default test" finished-at="2025-04-28T15:47:00 IST" duration-ms="17298">
+      <class name="QAproject.ImplicitWait">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:QAproject.ImplicitWait@2f9f7dcf]" started-at="2025-04-28T15:46:43 IST" name="openBrowser" finished-at="2025-04-28T15:46:45 IST" duration-ms="2259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="olx()[pri:1, instance:QAproject.ExplicitWait@72967906]" started-at="2025-04-23T09:50:17 IST" name="olx" finished-at="2025-04-23T09:50:59 IST" duration-ms="41813" status="PASS">
+        <test-method signature="olx()[pri:1, instance:QAproject.ImplicitWait@2f9f7dcf]" started-at="2025-04-28T15:46:45 IST" name="olx" finished-at="2025-04-28T15:47:00 IST" duration-ms="14984" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- olx -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:QAproject.ExplicitWait@72967906]" started-at="2025-04-23T09:50:59 IST" name="closeBrowser" finished-at="2025-04-23T09:51:02 IST" duration-ms="3295" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- QAproject.ExplicitWait -->
+      </class> <!-- QAproject.ImplicitWait -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

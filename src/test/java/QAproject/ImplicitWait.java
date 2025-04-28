@@ -28,21 +28,21 @@ public class ImplicitWait {
     
     @Test (priority=1)
     public void olx() throws InterruptedException {
-    	driver.get("https://www.olx.in/en-in");
-		WebElement inputbox = driver.findElement(By.xpath("//input[@data-aut-id='searchBox']"));
-		inputbox.sendKeys("bat");
-		
-		WebElement searchbtn = driver.findElement(By.xpath("//div[@data-aut-id=\"btnSearch\"]"));
-		searchbtn.click();
-		
-		WebElement firstprd = driver.findElement(By.xpath("//a[@href=\"/en-in/item/sports-equipment-c100-cricket-bat-in-chittoor-pathanamthitta-iid-1794796394\"]"));
+    	driver.get("https://www.quikr.com/");
+    	Thread.sleep(3000);
+		WebElement inputbox = driver.findElement(By.xpath("//input[@id=\"query\"]"));
+		inputbox.sendKeys("car");
+		inputbox.click();
+		inputbox.sendKeys(Keys.ENTER);
+		Thread.sleep(5000);
+		WebElement firstprd = driver.findElement(By.xpath("(//div[@class=\"mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone\"])[1]"));
 		firstprd.click();
     }
     
-    @AfterMethod 
-    public void closeBrowser() throws InterruptedException {
-    	Thread.sleep(3000);
-    	driver.quit();
-    }
+//    @AfterMethod 
+//    public void closeBrowser() throws InterruptedException {
+//    	Thread.sleep(3000);
+//    	driver.quit();
+//    }
        
 }
