@@ -23,11 +23,11 @@ public class ImplicitWait {
    		WebDriverManager.chromedriver().setup();
    		driver = new ChromeDriver();
    		driver.manage().window().maximize();
-   		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(35));
+   		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
    	}
     
     @Test (priority=1)
-    public void olx() throws InterruptedException {
+    public void implicitwait() throws InterruptedException {
     	driver.get("https://www.quikr.com/");
     	Thread.sleep(3000);
 		WebElement inputbox = driver.findElement(By.xpath("//input[@id=\"query\"]"));
@@ -39,10 +39,10 @@ public class ImplicitWait {
 		firstprd.click();
     }
     
-//    @AfterMethod 
-//    public void closeBrowser() throws InterruptedException {
-//    	Thread.sleep(3000);
-//    	driver.quit();
-//    }
+    @AfterMethod 
+    public void closeBrowser() throws InterruptedException {
+    	Thread.sleep(3000);
+    	driver.quit();
+    }
        
 }
