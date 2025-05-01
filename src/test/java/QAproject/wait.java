@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -56,36 +57,37 @@ public class wait {
     }
 
     @Test(priority=2)
-    public void explicitWait() throws InterruptedException {
-        driver.get("https://www.quikr.com/");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15)); 
-        
-        WebElement inputbox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='query']")));
-        inputbox.sendKeys("bike");
-        inputbox.click();
-        inputbox.sendKeys(Keys.ENTER);
-        
-        WebElement firstprd = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone'])[1]")));
-        firstprd.click();
+    public void explicitWaitTest() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Search']")));
+        searchBtn.click();
+
+        WebElement inputBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search']")));
+        inputBox.sendKeys("Ed Sheeran");
+
+        WebElement firstPrd = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='x9f619 x78zum5 xdt5ytf x1iyjqo2 x6ikm8r x1odjw0f xh8yej3 xocp1fn']/a[1]")));
+        firstPrd.click();
     }
+
     
     @Test(priority=3)
-    public void fluentWait() throws InterruptedException {
-        driver.get("https://www.quikr.com/");
-        
-        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-            .withTimeout(Duration.ofSeconds(20))
+    public void fluentWaitTest() {
+        FluentWait<WebDriver> fluentWait = new FluentWait<>(driver)
+            .withTimeout(Duration.ofSeconds(15))
             .pollingEvery(Duration.ofSeconds(2))
-            .ignoring(NoSuchElementException.class); 
-        
-        WebElement inputbox = wait.until(driver -> driver.findElement(By.xpath("//input[@id='query']")));
-        inputbox.sendKeys("laptop");
-        inputbox.click();
-        inputbox.sendKeys(Keys.ENTER);
-        
-        WebElement firstprd = wait.until(driver -> driver.findElement(By.xpath("(//div[@class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone'])[1]")));
-        firstprd.click();
+            .ignoring(NoSuchElementException.class);
+
+        WebElement searchBtn = fluentWait.until(driver -> driver.findElement(By.xpath("//span[text()='Search']")));
+        searchBtn.click();
+
+        WebElement inputBox = fluentWait.until(driver -> driver.findElement(By.xpath("//input[@placeholder='Search']")));
+        inputBox.sendKeys("Ed Sheeran");
+
+        WebElement firstPrd = fluentWait.until(driver -> driver.findElement(By.xpath("//div[@class='x9f619 x78zum5 xdt5ytf x1iyjqo2 x6ikm8r x1odjw0f xh8yej3 xocp1fn']/a[1]")));
+        firstPrd.click();
     }
+
     
     @AfterMethod 
     public void closeBrowser() throws InterruptedException {
