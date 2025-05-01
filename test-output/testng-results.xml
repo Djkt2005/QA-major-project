@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-01T09:50:10 IST" name="Default suite" finished-at="2025-05-01T09:50:32 IST" duration-ms="22641">
+  <suite started-at="2025-05-01T11:05:48 IST" name="Default suite" finished-at="2025-05-01T11:06:10 IST" duration-ms="21271">
     <groups>
     </groups>
-    <test started-at="2025-05-01T09:50:10 IST" name="Default test" finished-at="2025-05-01T09:50:32 IST" duration-ms="22641">
-      <class name="QAproject.wait">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:QAproject.wait@42a48628]" started-at="2025-05-01T09:50:10 IST" name="openBrowser" finished-at="2025-05-01T09:50:18 IST" duration-ms="8774" status="PASS">
+    <test started-at="2025-05-01T11:05:48 IST" name="Default test" finished-at="2025-05-01T11:06:10 IST" duration-ms="21271">
+      <class name="QAproject.select">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:QAproject.select@1bd4fdd]" started-at="2025-05-01T11:05:48 IST" name="openBrowser" finished-at="2025-05-01T11:05:57 IST" duration-ms="8964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="implicitwait()[pri:1, instance:QAproject.wait@42a48628]" started-at="2025-05-01T09:50:18 IST" name="implicitwait" finished-at="2025-05-01T09:50:29 IST" duration-ms="10392" status="PASS">
+        <test-method signature="dropdowns()[pri:1, instance:QAproject.select@1bd4fdd]" started-at="2025-05-01T11:05:57 IST" name="dropdowns" finished-at="2025-05-01T11:06:06 IST" duration-ms="8849" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- implicitwait -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:QAproject.wait@42a48628]" started-at="2025-05-01T09:50:29 IST" name="closeBrowser" finished-at="2025-05-01T09:50:32 IST" duration-ms="3425" status="PASS">
+        </test-method> <!-- dropdowns -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:QAproject.select@1bd4fdd]" started-at="2025-05-01T11:06:06 IST" name="closeBrowser" finished-at="2025-05-01T11:06:10 IST" duration-ms="3406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- QAproject.wait -->
+      </class> <!-- QAproject.select -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
