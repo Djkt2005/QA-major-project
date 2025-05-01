@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="QAproject.ImplicitWait">
+      <class name="QAproject.wait">
         <methods>
           <include name="openBrowser"/>
-          <include name="olx"/>
+          <include name="implicitwait"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- QAproject.ImplicitWait -->
+      </class> <!-- QAproject.wait -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

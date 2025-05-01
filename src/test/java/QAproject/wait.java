@@ -26,18 +26,32 @@ public class wait {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
+        driver.get("https://www.instagram.com/");
+        
+        Thread.sleep(3000);
+       
+        WebElement email = driver.findElement(By.xpath("(//input[@name=\"username\"])"));
+        email.sendKeys("ktforqa@gmail.com");
+        
+        Thread.sleep(2000);
+        WebElement pass = driver.findElement(By.xpath("//input[@name=\"password\"]"));
+        pass.sendKeys("Ronit@2005");
+        
+        WebElement btn = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
+        btn.click();
     }
     
     @Test(priority=1)
     public void implicitwait() throws InterruptedException {
-        driver.get("https://www.quikr.com/");
         Thread.sleep(3000);
-        WebElement inputbox = driver.findElement(By.xpath("//input[@id='query']"));
-        inputbox.sendKeys("car");
-        inputbox.click();
-        inputbox.sendKeys(Keys.ENTER);
+        WebElement Searchbtn = driver.findElement(By.xpath("//span[text()='Search']"));
+        Searchbtn.click();
+        
+        WebElement inputbox = driver.findElement(By.xpath("//input[@placeholder=\"Search\"]"));
+        inputbox.sendKeys("Ed Sheeran");
+        
         Thread.sleep(5000);
-        WebElement firstprd = driver.findElement(By.xpath("(//div[@class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone'])[1]"));
+        WebElement firstprd = driver.findElement(By.xpath("//div[@class=\"x9f619 x78zum5 xdt5ytf x1iyjqo2 x6ikm8r x1odjw0f xh8yej3 xocp1fn\"]/a[1]"));
         firstprd.click();
     }
 

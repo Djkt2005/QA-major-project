@@ -30,36 +30,25 @@ public class Login {
     
     @Test(priority = 1)
     public void login() throws InterruptedException {
-        driver.get("https://www.quikr.com/");
-
+        driver.get("https://www.instagram.com/");
         
         Thread.sleep(3000);
-        // Wait and click "Login" button
-        WebElement loginBtn = driver.findElement(By.xpath("//label[contains(text(),'Login/Register')]"));
-
-        loginBtn.click();
-//        
-        Thread.sleep(3000);
-        WebElement email = driver.findElement(By.xpath("(//input[@type='text'])[3]"));
-        email.sendKeys("krishanttanti@gmail.com");
+       
+        WebElement email = driver.findElement(By.xpath("(//input[@name=\"username\"])"));
+        email.sendKeys("ktforqa@gmail.com");
         
-        email = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
-        email.click();
+        Thread.sleep(2000);
+        WebElement pass = driver.findElement(By.xpath("//input[@name=\"password\"]"));
+        pass.sendKeys("Ronit@2005");
         
-        Thread.sleep(3000);
-        WebElement pass = driver.findElement(By.xpath("//input[@type='password']"));
-        pass.sendKeys("Chitra@1977");
-        
-        WebElement btn = driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
+        WebElement btn = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
         btn.click();
         
     }
 
-
-    
-//    @AfterMethod
-//    public void closeBrowser() throws InterruptedException {
-//        Thread.sleep(3000);
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void closeBrowser() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.quit();
+    }
 }
