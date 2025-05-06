@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-01T11:05:48 IST" name="Default suite" finished-at="2025-05-01T11:06:10 IST" duration-ms="21271">
+  <suite started-at="2025-05-06T10:20:38 IST" name="Default suite" finished-at="2025-05-06T10:21:13 IST" duration-ms="35713">
     <groups>
     </groups>
-    <test started-at="2025-05-01T11:05:48 IST" name="Default test" finished-at="2025-05-01T11:06:10 IST" duration-ms="21271">
-      <class name="QAproject.select">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:QAproject.select@1bd4fdd]" started-at="2025-05-01T11:05:48 IST" name="openBrowser" finished-at="2025-05-01T11:05:57 IST" duration-ms="8964" status="PASS">
+    <test started-at="2025-05-06T10:20:38 IST" name="Default test" finished-at="2025-05-06T10:21:13 IST" duration-ms="35713">
+      <class name="QAproject.Action">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:QAproject.Action@2f9f7dcf]" started-at="2025-05-06T10:20:38 IST" name="openBrowser" finished-at="2025-05-06T10:20:51 IST" duration-ms="13518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="dropdowns()[pri:1, instance:QAproject.select@1bd4fdd]" started-at="2025-05-01T11:05:57 IST" name="dropdowns" finished-at="2025-05-01T11:06:06 IST" duration-ms="8849" status="PASS">
+        <test-method signature="changeLanguage()[pri:2, instance:QAproject.Action@2f9f7dcf]" started-at="2025-05-06T10:20:51 IST" name="changeLanguage" finished-at="2025-05-06T10:21:13 IST" duration-ms="22142" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropdowns -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:QAproject.select@1bd4fdd]" started-at="2025-05-01T11:06:06 IST" name="closeBrowser" finished-at="2025-05-01T11:06:10 IST" duration-ms="3406" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- QAproject.select -->
+        </test-method> <!-- changeLanguage -->
+      </class> <!-- QAproject.Action -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
