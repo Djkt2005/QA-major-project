@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG Suite" >
+  
+
+  
+  
+  <listeners>
+  <listener class-name="com.InstagramBase.test"/>
+  </listeners>
+
+  <test name="UserTests">
+    <classes>
+      <class name="com.QAproject.loginTest.LoginTest">
+        <methods>
+     
+        </methods>
+      </class>
+    </classes>
+  </test>
+  
+</suite>
