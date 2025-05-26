@@ -25,17 +25,16 @@ public class Base {
 			prop.load(file);
 		} 
 		catch (FileNotFoundException e) {
-			
 			e.printStackTrace();
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
 		}	
 	}
+	
 	public void initialize() {
 		String browserName = prop.getProperty("browser");
 		if("chrome".equals(browserName)){
-			
 			WebDriverManager.chromedriver().setup();
 	        driver = new ChromeDriver();
 	        driver.manage().window().maximize();

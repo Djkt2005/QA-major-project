@@ -1,4 +1,4 @@
-package com.InstagramBase;
+package com.Instagram.util;
 
 import java.io.File;
 import java.io.IOException;
