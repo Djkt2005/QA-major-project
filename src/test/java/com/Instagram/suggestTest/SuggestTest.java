@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.ITestContext;
 
-import com.InstagramBase.Base;
+import com.Instagram.base.Base;
 import com.Instagram.suggest.Suggest;
 import com.QAproject.login.Login;
 
