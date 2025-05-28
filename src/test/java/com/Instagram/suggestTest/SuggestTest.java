@@ -9,7 +9,7 @@ import org.testng.ITestContext;
 
 import com.Instagram.base.Base;
 import com.Instagram.suggest.Suggest;
-import com.QAproject.login.Login;
+import com.Instagram.login.Login;
 
 public class SuggestTest extends Base {
     private Suggest suggest;

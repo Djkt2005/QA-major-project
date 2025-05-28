@@ -9,7 +9,7 @@ import org.testng.ITestContext;
 
 import com.Instagram.base.Base;
 import com.Instagram.search.Search;
-import com.QAproject.login.Login;
+import com.Instagram.login.Login;
 
 public class SearchTest extends Base {
     private Search search;
