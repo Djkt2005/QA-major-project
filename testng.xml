@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Instagram Test Suite">
+<suite name="Instagram Automation Suite">
     <listeners>
-        <listener class-name="com.Instagram.util.ExtentReporterNG"/>
+        <listener class-name="com.Instagram.util.TestListener"/>
     </listeners>
-    
+
     <test name="Login Tests">
         <classes>
-            <class name="com.QAproject.loginTest.LoginTest"/>
+            <class name="com.Instagram.loginTest.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Search Tests">
+        <classes>
+            <class name="com.Instagram.searchTest.SearchTest"/>
         </classes>
     </test>
 
     <test name="Suggest Tests">
         <classes>
             <class name="com.Instagram.suggestTest.SuggestTest"/>
+        </classes>
+    </test>
+
+    <test name="Page View Tests">
+        <classes>
+            <class name="com.Instagram.pageviewTest.PageViewTest"/>
+        </classes>
+    </test>
+
+    <test name="Window Handler Tests">
+        <classes>
+            <class name="com.Instagram.windowTest.WindowHandlerTest"/>
         </classes>
     </test>
 </suite>
